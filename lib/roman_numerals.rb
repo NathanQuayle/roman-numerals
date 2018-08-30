@@ -30,7 +30,20 @@ def translate(num)
     "900": "CM",
     "1000": "M"
   }
+  my_arr = num.to_s.split("")
+  count = my_arr.length-1
+  f_convert = ""
+  new_array = my_arr.map {|x| run = x + ("0" * count); count -= 1; run}
+  
+  #p new_array
+  
+  new_array.each do |x|
+    if r_table.key? (x.to_sym)
+      f_convert << r_table[x.to_sym]
+    end
+  end
 
-  r_table[num]
+  f_convert
   
 end
+  
