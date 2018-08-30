@@ -50,4 +50,12 @@ describe "#translate" do
     expect(translate(999)). to eq "CMXCIX"
   end
   
+  it "returns 'Sorry, I tried!' when passed a string" do
+    expect(translate("srinfc")). to eq "Sorry, I tried!"
+  end
+  
+  it "returns 'Sorry, I tried!' when passed a number over 3999" do
+    expect(translate("4000")). to eq "Sorry, I tried!"
+  end
+  
 end
