@@ -21,4 +21,33 @@ describe "#translate" do
   it "returns 'LX' when passed 60" do
     expect(translate(60)). to eq "LX"
   end
+  
+  it "returns 'C' when passed 100" do
+    expect(translate(100)). to eq "C"
+  end
+  
+  it "returns 'CC' when passed 200" do
+    expect(translate(200)). to eq "CC"
+  end
+  
+  it "returns 'DC' when passed 600" do
+    expect(translate(600)). to eq "DC"
+  end
+  
+  it "returns 'M' when passed 1000" do
+    expect(translate(1000)). to eq "M"
+  end
+  
+    it "returns 'LV' when passed 55" do
+    expect(translate(55)). to eq "LV"
+  end
+  
+  it "returns 'DCLXXVIII' when passed 678" do
+    expect(translate(678)). to eq "DCLXXVIII"
+  end
+  
+  it "returns 'CMXCIXM' when passed 999" do
+    expect(translate(999)). to eq "CMXCIX"
+  end
+  
 end
