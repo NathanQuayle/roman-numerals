@@ -14,4 +14,11 @@ describe "#translate" do
     expect(translate(4)).to eq "IV"
   end
   
+  it "returns 'X' when passed 10" do
+    expect(translate(10)). to eq "X"
+  end
+  
+  it "returns 'LX' when passed 60" do
+    expect(translate(60)). to eq "LX"
+  end
 end
